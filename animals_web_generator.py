@@ -1,24 +1,22 @@
 import json
 
-
 def load_data(file_path):
     """Loads a JSON file"""
     with open(file_path, "r") as handle:
         return json.load(handle)
-
 
 # Load data from animals_data.json
 animals_data = load_data('animals_data.json')
 
 # Iterate through animals and print required fields
 for animal in animals_data:
-    if "name" in animal:
+       if "name" in animal:
         print(f"Name: {animal['name']}")
-    if "diet" in animal:
+       if "diet" in animal:
         print(f"Diet: {animal['diet']}")
-    if "locations" in animal and len(animal["locations"]) > 0:
+       if "locations" in animal and len(animal["locations"]) > 0:
         print(f"Location: {animal['locations'][0]}")
-    if "type" in animal:
+       if "type" in animal:
         print(f"Type: {animal['type']}")
 
-    print()  # Blank line between animals
+       print()  # blank line between animals
